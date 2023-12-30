@@ -1,21 +1,18 @@
---[[
-return { 
+--[[ return { 
   "catppuccin/nvim",
   lazy = false,
-  name = "catppuccin", 
+  name = "catppuccin",
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme "catppuccin"
+    vim.cmd.colorscheme "catppuccin-mocha"
   end
 }
 --]]
 return {
-  'projekt0n/github-nvim-theme',
-  lazy = false, 
-  priority = 1000, 
-  config = function()
-    require('github-theme').setup({
-    })
-    vim.cmd('colorscheme github_dark_dimmed')
-  end
+  "rebelot/kanagawa.nvim",
+  lazy = false,
+  config = function ()
+    vim.cmd.colorscheme "kanagawa-dragon"
+    --vim.cmd.colorscheme "kanagawa-dragon"
+ end
 }
