@@ -18,6 +18,7 @@ return {
           "dockerls",
           "helm_ls",
           "pyright",
+          "tflint",
           "yamlls",
           "lua_ls",
           "gopls",
@@ -37,6 +38,7 @@ return {
       lspconfig.pyright.setup({})
       lspconfig.yamlls.setup({})
       lspconfig.lua_ls.setup({})
+      lspconfig.tflint.setup({})
       lspconfig.gopls.setup({})
       -- keymap
       -- Global mappings.
