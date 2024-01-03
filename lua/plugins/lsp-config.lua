@@ -21,7 +21,6 @@ return {
           "tflint",
           "yamlls",
           "lua_ls",
-          "gopls",
         }
       })
     end
@@ -39,7 +38,6 @@ return {
       lspconfig.yamlls.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.tflint.setup({})
-      lspconfig.gopls.setup({})
       -- keymap
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
