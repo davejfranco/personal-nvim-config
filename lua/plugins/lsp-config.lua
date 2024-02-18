@@ -39,7 +39,22 @@ return {
       lspconfig.yamlls.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.tflint.setup({})
-      lspconfig.gopls.setup({})
+
+      lspconfig.gopls.setup({
+        cmd = { "gopls", "serve" },
+        filetypes = { "go", "gomod", "gowork", "gotmpl"},
+        root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+          },
+        },
+      })
       -- keymap
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
