@@ -1,4 +1,4 @@
-return { 
+--[[return {
   "catppuccin/nvim",
   lazy = false,
   name = "catppuccin",
@@ -6,13 +6,11 @@ return {
   config = function()
     vim.cmd.colorscheme "catppuccin-mocha"
   end
-}
---[[return {
-  "rebelot/kanagawa.nvim",
-  lazy = false,
-  config = function ()
-    vim.cmd.colorscheme "kanagawa-dragon"
-    --vim.cmd.colorscheme "kanagawa-dragon"
- end
 }--]]
-
+return {
+	"rebelot/kanagawa.nvim",
+	lazy = false,
+	config = function()
+		vim.cmd.colorscheme("kanagawa-wave")
+	end,
+}
